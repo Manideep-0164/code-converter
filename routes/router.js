@@ -11,8 +11,8 @@ router.post("/convert", async (req, res) => {
     const response = await axios.post(
       "https://api.openai.com/v1/engines/text-davinci-003/completions",
       {
-        prompt: `Convert the following code snippet to ${targetLanguage}. Provide the converted code only, without introductory lines or additional explanations.\n\n${code}`,
-        max_tokens: 50,
+        prompt: `Convert the following code snippet to ${targetLanguage}. Deliver only the code without supplementary explanations or introductory text.\n\n${code}`,
+        max_tokens: 100,
       },
       {
         headers: {
